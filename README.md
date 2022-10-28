@@ -75,6 +75,27 @@ const num = "3, 0, 2, 1, 13, 23, 21, 10";
 beepityBoopity(num);
 Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep", "Won't you be my neighboor?", "Won't you be my neighboor?", "Boop", "Beep"];
 ```
+```
+Describe countArray()
+
+Test1: Take input return number input in array
+Code: 
+const input = "0";
+countArray(input);
+Expected Output: [0];
+
+Test2: Set counter value of 0 and return counter value in array
+Code: 
+const input = "0";
+countArray(input);
+Expected Output: [0];
+
+Test3: Count to input, setting counter to match input each iteration, push to array
+Code: 
+const input = "5";
+countArray(input);
+Expected Output: [0, 1, 2, 3, 4, 5];
+```
 ## Known bugs
 * _No known bugs_.
 
