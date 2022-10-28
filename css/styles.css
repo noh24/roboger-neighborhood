@@ -28,8 +28,7 @@ img#scary-witch {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid white;
-  font-size: 30px;
+  font-size: 22px;
 }
 #hidden2,
 #input-name,
@@ -37,6 +36,25 @@ img#scary-witch {
   padding: 10px;
   margin: 10px;
 }
-#hidden1 {
+::placeholder {
+  text-align: center;
+  color: white;
 }
-
+button {
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid rgba(252, 139, 11, 0.733);
+  background-color: rgba(252, 139, 11, 0.733);
+  color: white;
+}
+input {
+  padding: 8px;
+  margin-top: 8px;
+  width: 400px;
+  border: 1px solid rgba(193, 191, 197, 0.692);
+  background-color: rgba(184, 178, 178, 0.562);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
