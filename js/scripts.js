@@ -1,4 +1,4 @@
-//business
+// //business
 function countArray(input) {
   let counter = 0;
   let inputArray = [];
@@ -27,7 +27,20 @@ function beepityBoopity(inputArray, name) {
   return newAr;
 }
 
-//ui
-const inputArray = countArray(input);
-const beepBoop = beepityBoopity(inputArray);
+// //ui
+// const inputArray = countArray(input);
+// const beepBoop = beepityBoopity(inputArray);
 //user input form stuff here
+
+document.getElementById("fire").addEventListener("click", function() {
+  document.getElementById("hidden1").setAttribute("class", "hidden");
+  document.getElementById("hidden2").classList.remove("hidden");
+  document.querySelector("legend").classList.add("hidden");
+});
+
+document.querySelector("form").addEventListener("submit", function () {
+  document.querySelector("legend").classList.add("hidden");
+  const name = document.getElementById("user-name").value;
+  const input = document.getElementById("user-num").value;
+  
+});
