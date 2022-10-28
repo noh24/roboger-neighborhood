@@ -15,14 +15,29 @@ img#scary-witch {
   right: 250px;
 }
 legend {
-  border: 1px solid;
   position: absolute;
-  bottom: 350px;
-  right: 550px;
+  bottom: 330px;
+  right: 500px;
   width: 300px;
   margin: 50px auto;
   padding: 20px;
+  text-align: center;
+  background: #8c9191d0;
+  border-radius: 15px;
 }
+legend:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #8c9191d0;
+  border-top: 10px solid #8c9191d0;
+  border-bottom: 10px solid transparent;
+  right: 19px;
+  bottom: -20px;
+}
+
 .container {
   width: 90%;
   height: 90vh;
@@ -72,6 +87,8 @@ img#fire {
   cursor: pointer;
 }
 .hidden,
-#hidden2.hidden {
+#hidden2.hidden,
+#hidden1.hidden {
   display: none;
 }
+
