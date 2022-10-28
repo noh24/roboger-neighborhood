@@ -1,12 +1,14 @@
 body {
-  height: 98.3vh;
-  width: 96vw;
+  height: 98vh;
   background: url(../img/burning-cartoon-town.jpg) no-repeat center;
   background-size: cover;
   font-family: 'Lucida Console', monospace;
   color: rgba(241, 241, 241, 0.842);
 }
-
+.container {
+  height: 90vh;
+  margin: auto;
+}
 img#scary-witch {
   width: 350px;
   height: auto;
@@ -37,12 +39,25 @@ legend:before {
   right: 19px;
   bottom: -20px;
 }
-
-.container {
-  width: 90%;
-  height: 90vh;
-  margin: auto;
+ul {
+  position: absolute;
+  left: 200px;
+  bottom: 100px;
+  width: 400px;
+  height: 75%;
+  list-style: none;
+  list-style-position: outside;
+  border: 1px solid;
+  background-color: rgb(87, 16, 16);
+  padding-right: 2.5rem;
 }
+ul > li {
+  border: 1px solid;
+  width: 400px;
+  text-align: center;
+  padding: 5px 0;
+}
+
 
 .container,
 #hidden2,
