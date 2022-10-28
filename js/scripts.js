@@ -22,6 +22,7 @@ const input = "0"
 
 function countArray(input) {
   let inputArray = [];
-  inputArray.push(Number(input))
+  let counter = 0; 
+  inputArray.push(Number(counter))
   return inputArray;
 }
