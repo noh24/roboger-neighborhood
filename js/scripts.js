@@ -9,13 +9,13 @@ function countArray(input) {
   return inputArray;
 }
 
-function beepityBoopity(inputArray) {
+function beepityBoopity(inputArray, name) {
   // const numAr = num.split(" ");
   let newAr = [];
 
   for (let i = 0; i < inputArray.length; i++) {
     if (inputArray[i].includes(3)) {
-      newAr.push("Won't you be my neighboor?");
+      newAr.push("Won't you be my neighboor, " + name +"?");
     } else if (inputArray[i].includes(2)) {
       newAr.push("Boop");
     } else if (inputArray[i].includes(1)) {
