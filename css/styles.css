@@ -14,7 +14,15 @@ img#scary-witch {
   bottom: 150px;
   right: 250px;
 }
-
+legend {
+  border: 1px solid;
+  position: absolute;
+  bottom: 350px;
+  right: 550px;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+}
 .container {
   width: 90%;
   height: 90vh;
@@ -29,12 +37,13 @@ img#scary-witch {
   flex-direction: column;
   align-items: center;
   font-size: 22px;
-}
-#hidden2,
-#input-name,
-#input-num {
   padding: 10px;
   margin: 10px;
+}
+#hidden1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 ::placeholder {
   text-align: center;
@@ -57,4 +66,12 @@ input {
   border-radius: 10px;
   color: white;
   text-align: center;
+}
+img#fire {
+  width: 150px;
+  cursor: pointer;
+}
+.hidden,
+#hidden2.hidden {
+  display: none;
 }
