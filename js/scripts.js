@@ -13,3 +13,25 @@ function beepityBoopity(num) {
   numAr.push(num);
   return numAr;
 }
+
+// Test2: Take a string of numbers, replace 3 with "Won't you be my neighboor?" 
+// Code: 
+// const num = "3, 0";
+// beepityBoopity(num);
+// Expected Output: ["Won't you be my neighboor?", 0];
+
+const num = "3 0";
+
+function beepityBoopity(num) {
+  const numAr = num.split(" ");
+  let newAr = [];
+
+  for (let i = 0; i < numAr.length; i++) {
+    if (numAr[i].includes(3)) {
+      newAr.push("Won't you be my neighboor?");
+    } else {
+      newAr.push(numAr[i]);
+    }
+  }
+  return newAr;
+}
