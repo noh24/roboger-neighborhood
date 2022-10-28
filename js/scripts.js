@@ -18,11 +18,14 @@ function beepityBoopity(num) {
   return newAr;
 }
 
-const input = "0"
+const input = "5"
 
 function countArray(input) {
+  let counter = 0;
   let inputArray = [];
-  let counter = 0; 
-  inputArray.push(Number(counter))
+  do {
+    inputArray.push(counter());
+    counter++;
+  } while (counter <= Number(input))
   return inputArray;
 }
