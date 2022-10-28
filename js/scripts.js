@@ -1,31 +1,33 @@
-//business logic
+//business
+function countArray(input) {
+  let counter = 0;
+  let inputArray = [];
+  do {
+    inputArray.push(counter.toString());
+    counter++;
+  } while (counter <= Number(input))
+  return inputArray;
+}
 
-function beepityBoopity(num) {
-  const numAr = num.split(" ");
+function beepityBoopity(inputArray) {
+  // const numAr = num.split(" ");
   let newAr = [];
 
-  for (let i = 0; i < numAr.length; i++) {
-    if (numAr[i].includes(3)) {
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i].includes(3)) {
       newAr.push("Won't you be my neighboor?");
-    } else if (numAr[i].includes(2)) {
+    } else if (inputArray[i].includes(2)) {
       newAr.push("Boop");
-    } else if (numAr[i].includes(1)) {
+    } else if (inputArray[i].includes(1)) {
       newAr.push("Beep");
     } else {
-      newAr.push(numAr[i]);
+      newAr.push(inputArray[i]);
     }
   }
   return newAr;
 }
 
-const input = "5"
-
-function countArray(input) {
-  let counter = 0;
-  let inputArray = [];
-  do {
-    inputArray.push(counter());
-    counter++;
-  } while (counter <= Number(input))
-  return inputArray;
-}
+//ui
+const inputArray = countArray(input);
+const beepBoop = beepityBoopity(inputArray);
+//user input form stuff here
