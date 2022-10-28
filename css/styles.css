@@ -1,0 +1,42 @@
+body {
+  height: 98.3vh;
+  width: 96vw;
+  background: url(../img/burning-cartoon-town.jpg) no-repeat center;
+  background-size: cover;
+  font-family: 'Lucida Console', monospace;
+  color: rgba(241, 241, 241, 0.842);
+}
+
+img#scary-witch {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  bottom: 150px;
+  right: 250px;
+}
+
+.container {
+  width: 90%;
+  height: 90vh;
+  margin: auto;
+}
+
+.container,
+#hidden2,
+#input-name,
+#input-num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  font-size: 30px;
+}
+#hidden2,
+#input-name,
+#input-num {
+  padding: 10px;
+  margin: 10px;
+}
+#hidden1 {
+}
+
