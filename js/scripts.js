@@ -36,29 +36,34 @@ document.getElementById("fire").addEventListener("click", function() {
 
 document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
-  getInput();
+  const name = document.getElementById("user-name").value;
+  const input = document.getElementById("user-num").value;
+
+  if (!name || name == '') {
+    document.getElementById("error-name").classList.remove("hidden");
+  } else if (!input) {
+    document.getElementById("error-num").classList.remove("hidden");
+  } else {
+    result(name, input);
+  }
+  
   document.querySelector("legend").classList.add("hidden");
   document.getElementById("hidden2").classList.add("hidden");
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("reset").classList.remove("hidden");
 });
 
-function getInput() {
-  const name = document.getElementById("user-name").value;
-  const input = document.getElementById("user-num").value;
+function result(name, input) {
   const inputArray = countArray(input);
   const beepBoop = beepityBoopity(inputArray, name);
-  if (!name || !input) {
-  } else { 
-    for (let i = 0; i < beepBoop.length; i++) {
-      setTimeout(function() {
-        const li = document.createElement("li")
-        li.append(beepBoop[i]);
-        document.getElementById("results").append(li);
-      }, i * 800);
-    }
+
+  for (let i = 0; i < beepBoop.length; i++) {
+    setTimeout(function() {
+      const li = document.createElement("li")
+      li.append(beepBoop[i]);
+      document.getElementById("results").append(li);
+    }, i * 800);
   }
-  
 }
 
 document.getElementById("reset").addEventListener("click", function() { 
