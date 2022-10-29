@@ -50,15 +50,16 @@ ul {
   border: 1px solid;
   background-color: rgb(87, 16, 16);
   padding-right: 2.5rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 ul > li {
   border: 1px solid;
-  width: 400px;
   text-align: center;
   padding: 5px 0;
 }
-
-
 .container,
 #hidden2,
 #input-name,
