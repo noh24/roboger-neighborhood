@@ -10,23 +10,29 @@ body {
   margin: auto;
 }
 ul {
-  position: absolute;
   left: 200px;
   bottom: 100px;
-  width: 400px;
+  width: 75%;
   height: 75%;
   list-style: none;
   list-style-position: outside;
-  background-color: rgba(87, 16, 16, 0.616);
+  background-color: rgba(87, 16, 16, 0);
   padding-right: 2.5rem;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
+  animation-timing-function: backwards;
 }
 ul > li {
   text-align: center;
   padding: 5px 0;
+  background-color: rgba(56, 32, 0, 0.616);
+  width: 300px;
+  border-radius: 25px;
+  border: 1px solid rgba(56, 32, 0, 0.616);
+  animation: witchcraft 4s ease backwards;
 }
 .container,
 #hidden2,
@@ -52,8 +58,16 @@ ul > li {
 #reset {
   margin-top: 100px;
 }
+#results-container {
+  width: 90%;
+  position: relative;
+  z-index: 1;
+}
 p {
   color: red;
+}
+p#error-num {
+  color: white;
 }
 button {
   padding: 10px;
@@ -111,4 +125,13 @@ legend:before {
   border-bottom: 10px solid transparent;
   right: 19px;
   bottom: -20px;
+}
+@keyframes witchcraft {
+  from {
+    transform: translate(300%, -300%);
+  }
+  to {
+    position: absolute;
+    transform: translate(0%, 0%);
+  }
 }
