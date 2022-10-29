@@ -1,7 +1,7 @@
 # Roboger Neighboorhood Project
 By Brian Noh
 Epicodus Independent Project: Roboger Neighboorhood Project   
-_Currently not deployed_:[Roboger Neighboorhood Project](noh24.github.com/roboger-neighborhood/)
+_Currently not deployed_: [Roboger Neighboorhood Project](noh24.github.com/roboger-neighborhood/)
 
 ## Technologies Used  
 * HTML
@@ -14,7 +14,8 @@ _Currently not deployed_:[Roboger Neighboorhood Project](noh24.github.com/roboge
 This webpage accepts a number from user input and returns a list of values from 0 to the user's inputted number with the following substitution:
 * For numbers that contain a 1, all digits are replaced with "Beep!"
 * For numbers that contain a 2, all digits are replaced with "Boop!"
-* For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?"   
+* For numbers that contain a 3, all digits are replaced with "Won't you be my neighbor?"  
+
 __Order of priority: 3 > 2 > 1. 3 has higher prioirty over 2 and 1. 2 has higher priority over 1.__ 
 
 ## Setup/Installation Requirements
