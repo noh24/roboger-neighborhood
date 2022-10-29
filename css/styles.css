@@ -23,7 +23,7 @@ ul {
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  animation-timing-function: backwards;
+
 }
 ul > li {
   text-align: center;
@@ -32,7 +32,7 @@ ul > li {
   width: 300px;
   border-radius: 25px;
   border: 1px solid rgba(56, 32, 0, 0.616);
-  animation: witchcraft 4s ease backwards;
+  animation: witchcraft 4s ease ;
 }
 .container,
 #hidden2,
@@ -66,7 +66,7 @@ ul > li {
 p {
   color: red;
 }
-p#error-num {
+#error-num {
   color: white;
 }
 button {
@@ -92,18 +92,18 @@ input {
   text-align: center;
   color: white;
 }
-img#fire {
+#fire {
   width: 150px;
   cursor: pointer;
 }
-img#scary-witch {
+#scary-witch {
   width: 350px;
   height: auto;
   position: absolute;
   bottom: 150px;
   right: 250px;
 }
-legend {
+#box {
   position: absolute;
   bottom: 330px;
   right: 500px;
@@ -114,10 +114,10 @@ legend {
   background: #8c9191d0;
   border-radius: 15px;
 }
-legend:before {
+#box:before {
   content: "";
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   position: absolute;
   border-left: 10px solid transparent;
   border-right: 10px solid #8c9191d0;

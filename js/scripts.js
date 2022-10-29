@@ -5,7 +5,7 @@ function countArray(input) {
   do {
     inputArray.push(counter.toString());
     counter++;
-  } while (counter <= Number(input))
+  } while (counter <= Number(input));
   return inputArray;
 }
 
@@ -31,7 +31,7 @@ function beepityBoopity(inputArray, name) {
 document.getElementById("fire").addEventListener("click", function() {
   document.getElementById("hidden1").setAttribute("class", "hidden");
   document.getElementById("hidden2").classList.remove("hidden");
-  document.querySelector("legend").classList.add("hidden");
+  document.querySelector("div#box").classList.add("hidden");
 });
 
 document.querySelector("form").addEventListener("submit", function(e) {
@@ -52,7 +52,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
 });
 
 function result(name, input) {
-  document.querySelector("legend").classList.add("hidden");
+  document.querySelector("div#box").classList.add("hidden");
   document.getElementById("hidden2").classList.add("hidden");
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("reset").classList.remove("hidden");
@@ -62,7 +62,7 @@ function result(name, input) {
 
   for (let i = 0; i < beepBoop.length; i++) {
     setTimeout(function() {
-      const li = document.createElement("li")
+      const li = document.createElement("li");
       li.append(beepBoop[i]);
       document.getElementById("results").append(li);
     }, i * 800);
