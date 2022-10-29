@@ -10,12 +10,11 @@ function countArray(input) {
 }
 
 function beepityBoopity(inputArray, name) {
-  // const numAr = num.split(" ");
   let newAr = [];
 
   for (let i = 0; i < inputArray.length; i++) {
     if (inputArray[i].includes(3)) {
-      newAr.push("Won't you be my neighboor, " + name +"?");
+      newAr.push("Won't you be my neighboor, " + name + "?");
     } else if (inputArray[i].includes(2)) {
       newAr.push("Boop");
     } else if (inputArray[i].includes(1)) {
@@ -41,6 +40,9 @@ document.getElementById("fire").addEventListener("click", function() {
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   document.querySelector("legend").classList.add("hidden");
+  document.getElementById("hidden2").classList.add("hidden");
+  document.getElementById("results").classList.remove("hidden");
+  document.getElementById("reset").classList.remove("hidden");
   getInput();
 });
 
@@ -51,6 +53,10 @@ function getInput() {
   const beepBoop = beepityBoopity(inputArray, name);
 
   for (let i = 0; i < beepBoop.length; i++) {
-    document.createElement("li").append(beepBoop[i]);
+    setTimeout(function() {
+      const li = document.createElement("li")
+      li.append(beepBoop[i]);
+      document.getElementById("results").append(li);
+    }, i * 500);
   }
 }
