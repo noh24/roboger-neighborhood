@@ -27,9 +27,6 @@ function beepityBoopity(inputArray, name) {
 }
 
 // //ui
-// const inputArray = countArray(input);
-// const beepBoop = beepityBoopity(inputArray);
-//user input form stuff here
 
 document.getElementById("fire").addEventListener("click", function() {
   document.getElementById("hidden1").setAttribute("class", "hidden");
@@ -37,13 +34,13 @@ document.getElementById("fire").addEventListener("click", function() {
   document.querySelector("legend").classList.add("hidden");
 });
 
-document.querySelector("form").addEventListener("submit", function (e) {
+document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
+  getInput();
   document.querySelector("legend").classList.add("hidden");
   document.getElementById("hidden2").classList.add("hidden");
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("reset").classList.remove("hidden");
-  getInput();
 });
 
 function getInput() {
@@ -51,12 +48,19 @@ function getInput() {
   const input = document.getElementById("user-num").value;
   const inputArray = countArray(input);
   const beepBoop = beepityBoopity(inputArray, name);
-
-  for (let i = 0; i < beepBoop.length; i++) {
-    setTimeout(function() {
-      const li = document.createElement("li")
-      li.append(beepBoop[i]);
-      document.getElementById("results").append(li);
-    }, i * 500);
+  if (!name || !input) {
+  } else { 
+    for (let i = 0; i < beepBoop.length; i++) {
+      setTimeout(function() {
+        const li = document.createElement("li")
+        li.append(beepBoop[i]);
+        document.getElementById("results").append(li);
+      }, i * 800);
+    }
   }
+  
 }
+
+document.getElementById("reset").addEventListener("click", function() { 
+  document.location.reload();
+});
