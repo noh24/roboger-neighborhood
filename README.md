@@ -1,6 +1,6 @@
 # Roboger Neighboorhood Project
 By Brian Noh
-Epicodus Independent Project: Roboger Neighboorhood Project 
+Epicodus Independent Project: Roboger Neighboorhood Project   
 [Roboger Neighboorhood Project](noh24.github.com/roboger-neighborhood/)
 
 ## Technologies Used  
