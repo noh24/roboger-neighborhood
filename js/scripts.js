@@ -39,21 +39,24 @@ document.querySelector("form").addEventListener("submit", function(e) {
   const name = document.getElementById("user-name").value;
   const input = document.getElementById("user-num").value;
 
-  if (!name || name == '') {
+  if (!name || name.trim().length === 0 || Number(name)) {
     document.getElementById("error-name").classList.remove("hidden");
+    document.querySelector("label[for=user-name]").classList.add("hidden");
+    console.log(!name);
   } else if (!input) {
     document.getElementById("error-num").classList.remove("hidden");
+    document.querySelector("label[for=user-num]").classList.add("hidden");
   } else {
     result(name, input);
   }
-  
+});
+
+function result(name, input) {
   document.querySelector("legend").classList.add("hidden");
   document.getElementById("hidden2").classList.add("hidden");
   document.getElementById("results").classList.remove("hidden");
   document.getElementById("reset").classList.remove("hidden");
-});
-
-function result(name, input) {
+  
   const inputArray = countArray(input);
   const beepBoop = beepityBoopity(inputArray, name);
 
