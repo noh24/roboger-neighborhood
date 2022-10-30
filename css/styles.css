@@ -10,10 +10,11 @@ body {
   margin: auto;
 }
 ul {
+  position: absolute;
   left: 200px;
   bottom: 100px;
   width: 75%;
-  height: 75%;
+  height: 85%;
   list-style: none;
   list-style-position: outside;
   background-color: rgba(87, 16, 16, 0);
@@ -23,6 +24,7 @@ ul {
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  z-index: -1;
 
 }
 ul > li {
@@ -32,7 +34,7 @@ ul > li {
   width: 300px;
   border-radius: 25px;
   border: 1px solid rgba(56, 32, 0, 0.616);
-  animation: witchcraft 4s ease ;
+  animation: witchcraft 4s linear;
 }
 .container,
 #hidden2,
@@ -63,13 +65,18 @@ ul > li {
   position: relative;
   z-index: 1;
 }
-p {
+#error-name {
   color: red;
 }
 #error-num {
   color: white;
 }
+#error-name,
+#error-num {
+  animation: shake 1s infinite;
+}
 button {
+  margin-top: 8px;
   padding: 10px;
   font-size: 22px;
   border-radius: 15px;
@@ -88,13 +95,18 @@ input {
   color: white;
   text-align: center;
 }
+label[for=reverse-the-order] {
+  color: rgb(225, 250, 1);
+}
 ::placeholder {
   text-align: center;
   color: white;
 }
 #fire {
-  width: 150px;
+  width: 350px;
   cursor: pointer;
+  position: absolute;
+  top: 500px;
 }
 #scary-witch {
   width: 350px;
@@ -133,5 +145,22 @@ input {
   to {
     position: absolute;
     transform: translate(0%, -100%);
+  }
+}
+@keyframes shake {
+  0%, 50% {
+    transform: translate(-1px, 0);
+  }
+  30%, 75% {
+    transform: translate(1px, 0);
+  }
+  15%, 35%, 65% {
+    transform: translate(-1px, 0);
+  }
+  45%, 85% {
+    transform: translate(1px, 0);
+  }
+  25%, 100% {
+    transform: translate(-3px, 0);
   }
 }
