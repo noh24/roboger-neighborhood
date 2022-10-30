@@ -4,7 +4,7 @@ function beepityBoopity(input, name) {
 
   for (let i = 0; i <= Number(input); i++) {
     if (String(i).includes(3)) {
-      numAr.push("Won't you be my neighboor, " + name + "?");
+      numAr.push("Won't you be my neighbor, " + name + "?");
     } else if (String(i).includes(2)) {
       numAr.push("Boop");
     } else if (String(i).includes(1)) {
