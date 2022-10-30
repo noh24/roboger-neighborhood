@@ -1,29 +1,19 @@
 // //business
-function countArray(input) {
-  let counter = 0;
-  let inputArray = [];
-  do {
-    inputArray.push(counter.toString());
-    counter++;
-  } while (counter <= Number(input));
-  return inputArray;
-}
+function beepityBoopity(input, name) {
+  let numAr = [];
 
-function beepityBoopity(inputArray, name) {
-  let newAr = [];
-
-  for (let i = 0; i < inputArray.length; i++) {
-    if (inputArray[i].includes(3)) {
-      newAr.push("Won't you be my neighboor, " + name + "?");
-    } else if (inputArray[i].includes(2)) {
-      newAr.push("Boop");
-    } else if (inputArray[i].includes(1)) {
-      newAr.push("Beep");
+  for (let i = 0; i <= Number(input); i++) {
+    if (String(i).includes(3)) {
+      numAr.push("Won't you be my neighboor, " + name + "?");
+    } else if (String(i).includes(2)) {
+      numAr.push("Boop");
+    } else if (String(i).includes(1)) {
+      numAr.push("Beep");
     } else {
-      newAr.push(inputArray[i]);
+      numAr.push(i);
     }
   }
-  return newAr;
+  return numAr;
 }
 
 // //ui
@@ -33,42 +23,55 @@ document.getElementById("fire").addEventListener("click", function() {
   document.getElementById("hidden2").classList.remove("hidden");
   document.querySelector("div#box").classList.add("hidden");
 });
+document.getElementById("reset").addEventListener("click", function() { 
+  document.location.reload();
+});
 
 document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
   const name = document.getElementById("user-name").value;
   const input = document.getElementById("user-num").value;
+  const reverseTheOrder = document.getElementById("reverse-the-order").checked;
 
   if (!name || name.trim().length === 0 || Number(name)) {
     document.getElementById("error-name").classList.remove("hidden");
     document.querySelector("label[for=user-name]").classList.add("hidden");
-    console.log(!name);
+    console.log("it works");
   } else if (!input) {
     document.getElementById("error-num").classList.remove("hidden");
     document.querySelector("label[for=user-num]").classList.add("hidden");
-  } else {
-    result(name, input);
+  } else if (reverseTheOrder) {
+    document.getElementById("hidden2").classList.add("hidden");
+    document.getElementById("results").classList.remove("hidden");
+    document.getElementById("reset").classList.remove("hidden");
+    resultsInReverseList(name, input);
+  } else  {
+    document.getElementById("hidden2").classList.add("hidden");
+    document.getElementById("results").classList.remove("hidden");
+    document.getElementById("reset").classList.remove("hidden");
+    resultsInList(name, input);
   }
 });
 
-function result(name, input) {
-  document.querySelector("div#box").classList.add("hidden");
-  document.getElementById("hidden2").classList.add("hidden");
-  document.getElementById("results").classList.remove("hidden");
-  document.getElementById("reset").classList.remove("hidden");
-  
-  const inputArray = countArray(input);
-  const beepBoop = beepityBoopity(inputArray, name);
+function resultsInList(name, input) {
+  const beepBoop = beepityBoopity(input, name);
 
   for (let i = 0; i < beepBoop.length; i++) {
     setTimeout(function() {
       const li = document.createElement("li");
       li.append(beepBoop[i]);
       document.getElementById("results").append(li);
-    }, i * 800);
+    }, i * 1500);
   }
 }
-
-document.getElementById("reset").addEventListener("click", function() { 
-  document.location.reload();
-});
+function resultsInReverseList(name, input) {
+  const beepBoop = beepityBoopity(input, name);
+  const beepBoopReverse = beepBoop.reverse();
+  for (let i = 0; i < beepBoop.length; i++) {
+    setTimeout(function() {
+      const li = document.createElement("li");
+      li.append(beepBoopReverse[i]);
+      document.getElementById("results").append(li);
+    }, i * 1500);
+  }
+}
