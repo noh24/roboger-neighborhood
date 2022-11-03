@@ -35,69 +35,62 @@ const num = "0";
 beepityBoopity(num);
 Expected Output: [0];
 
-Test2: Take a string of numbers, replace 3 with "Won't you be my neighboor?" 
+Test2: Take a string of numbers, replace 3 with "Won't you be my neighbor?" 
 Code: 
 const num = "3, 0";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0];
+Expected Output: ["Won't you be my neighbor?", 0];
 
 Test3: Take a string of numbers, replace 2 with "Boop"
 Code: 
 const num = "3, 0, 2";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop"];
+Expected Output: ["Won't you be my neighbor?", 0, "Boop"];
 
 Test4: Take a string of numbers, replace 1 with "Beep" 
 Code: 
 const num = "3, 0, 2, 1";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep"];
+Expected Output: ["Won't you be my neighbor?", 0, "Boop", "Beep"];
 
 Test5: Take a string of numbers with one double digit of 1 AND 3.
 Code: 
 const num = "3, 0, 2, 1, 13";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep", "Won't you be my neighboor?"];
+Expected Output: ["Won't you be my neighbor?", 0, "Boop", "Beep", "Won't you be my neighbor?"];
 
 Test6: Take a string of numbers with two double digits of 2 AND 3.
 Code: 
 const num = "3, 0, 2, 1, 13, 23";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep", "Won't you be my neighboor?", "Won't you be my neighboor?"];
+Expected Output: ["Won't you be my neighbor?", 0, "Boop", "Beep", "Won't you be my neighbor?", "Won't you be my neighbor?"];
 
 Test7: Take a string of numbers with two double digits of 2 AND 1.
 Code: 
 const num = "3, 0, 2, 1, 13, 23, 21";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep", "Won't you be my neighboor?", "Won't you be my neighboor?", "Boop"];
+Expected Output: ["Won't you be my neighbor?", 0, "Boop", "Beep", "Won't you be my neighbor?", "Won't you be my neighbor?", "Boop"];
 
 Test8: Take a string of numbers with two double digits of 1 AND 0.
 Code: 
 const num = "3, 0, 2, 1, 13, 23, 21, 10";
 beepityBoopity(num);
-Expected Output: ["Won't you be my neighboor?", 0, "Boop", "Beep", "Won't you be my neighboor?", "Won't you be my neighboor?", "Boop", "Beep"];
-```
-```
-Describe countArray()
+Expected Output: ["Won't you be my neighbor?", 0, "Boop", "Beep", "Won't you be my neighbor?", "Won't you be my neighoor?", "Boop", "Beep"];
 
-Test1: Take input return number input in array
-Code: 
-const input = "0";
-countArray(input);
-Expected Output: [0];
+Test9: Take a string of one number, display an array counting up to number, starting from 0.
+Code:
+const num = "15";
+beepityBoopity(num);
+Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor?", 4, 5, 6, 7, 8, 9, "Beep", "Boop", "Won't you be my neighbor?", "Beep", "Beep"];
 
-Test2: Set counter value of 0 and return counter value in array
-Code: 
-const input = "0";
-countArray(input);
-Expected Output: [0];
-
-Test3: Count to input, setting counter to match input each iteration, push to array
-Code: 
-const input = "5";
-countArray(input);
-Expected Output: [0, 1, 2, 3, 4, 5];
+Test10: Take a string as second argument, represents name, and attach to the end of "Won't you be my neighbor?"
+Code:
+const num = "15";
+const name = "brian";
+beepityBoopity(num, name);
+Expected Output: [0, "Beep", "Boop", "Won't you be my neighbor, brian?", 4, 5, 6, 7, 8, 9, "Beep", "Boop", "Won't you be my neighbor, brian?", "Beep", "Beep"];
 ```
+
 ## Known bugs
 * _No known bugs_.
 
